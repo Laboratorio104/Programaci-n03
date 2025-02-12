@@ -15,6 +15,8 @@ public class Ejercicio1 {
         }
     
     */
+    
+    /*
     int n = 5;
     int[] a = op.llenarArreglo(n);
     System.out.println(op.mostrarElementos(a));
@@ -24,6 +26,21 @@ public class Ejercicio1 {
     int random = min + (int)(Math.random() * (max-min)+ 1);
     System.out.println("Numero generado entre " + min + " y " + max + ": " + random);
 
+*/
+    
+    double[] sueldos = {3000, 2500, 4000, 3500, 2800};  // Ejemplo de sueldos
+    double[] asignaciones = {500, 400, 600, 450, 550};  // Ejemplo de asignaciones
+    double[] deducciones = {200, 150, 300, 250, 180};  // Ejemplo de deducciones
 
+   
+    double[] netoPagar = op.calcularnetoPagar(sueldos, asignaciones, deducciones);{
+
+    for (int i = 0; i < netoPagar.length; i++) {
+        System.out.println("Neto a pagar de cada empleado" + "Empleado " + (i + 1) + ": " + netoPagar[i]);
+    }
     }
 }
+}
+
+
+

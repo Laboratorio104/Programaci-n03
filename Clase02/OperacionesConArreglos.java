@@ -34,10 +34,10 @@ public int[] llenarArreglo(int tam) {
     return nuevoArreglo;
 
 }
-public double[] calcularNetoPagar(double[] sueldos, double[] asignaciones, double[] deducciones) {
+public double[] calcularnetoPagar(double[] sueldos, double[] asignaciones, double[] deducciones) {
     int n = sueldos.length; 
     double[] netoPagar = new double[n];
-    
+
     for (int i = 0; i < n; i++) {
         netoPagar[i] = sueldos[i] + asignaciones[i] - deducciones[i];
     }
