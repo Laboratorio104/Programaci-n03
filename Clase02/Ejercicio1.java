@@ -16,13 +16,13 @@ public class Ejercicio1 {
     
     */
     int n = 5;
-    int[] a = op.llenarArregloAleatorios(n);
+    int[] a = op.llenarArreglo(n);
     System.out.println(op.mostrarElementos(a));
 
     int min = -10;
     int max = 20;
-    int random = min + (int)(Math.random() * (max-min)+ 1));
-    System.out.println("Numero generado entre " + min + " y " + max + ": " + randomNum);
+    int random = min + (int)(Math.random() * (max-min)+ 1);
+    System.out.println("Numero generado entre " + min + " y " + max + ": " + random);
 
 
     }
