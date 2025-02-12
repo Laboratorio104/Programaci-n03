@@ -26,8 +26,8 @@ public class Ejercicio1 {
     int random = min + (int)(Math.random() * (max-min)+ 1);
     System.out.println("Numero generado entre " + min + " y " + max + ": " + random);
 
-*/
-    
+/* 
+
     double[] sueldos = {3000, 2500, 4000, 3500, 2800};  // Ejemplo de sueldos
     double[] asignaciones = {500, 400, 600, 450, 550};  // Ejemplo de asignaciones
     double[] deducciones = {200, 150, 300, 250, 180};  // Ejemplo de deducciones
@@ -37,10 +37,21 @@ public class Ejercicio1 {
 
     for (int i = 0; i < netoPagar.length; i++) {
         System.out.println("Neto a pagar de cada empleado" + "Empleado " + (i + 1) + ": " + netoPagar[i]);
-    }
-    }
+*/        
+    
+    int[] edadesGrupo1 = {25, 30, 22, 28, 35};
+    int[] edadesGrupo2 = {40, 45, 29, 50, 38};
+
+    // Hallamos la mayor edad entre los dos grupos
+    int[] mayorEdad = op.hallarMayorEdad(edadesGrupo1, edadesGrupo2);
+    
+    System.out.println("La mayor edad entre ambos grupos es: " + mayorEdad);
 }
 }
+    
+
+
+
 
 
 
