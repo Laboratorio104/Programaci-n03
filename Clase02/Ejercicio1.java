@@ -43,8 +43,7 @@ public class Ejercicio1 {
     int[] edadesGrupo2 = {40, 45, 29, 50, 38};
 
     // Hallamos la mayor edad entre los dos grupos
-    int[] mayorEdad = op.hallarMayorEdad(edadesGrupo1, edadesGrupo2);
-    
+    int mayorEdad = op.hallarMayorEdad(edadesGrupo1, edadesGrupo2);
     System.out.println("La mayor edad entre ambos grupos es: " + mayorEdad);
 }
 }
