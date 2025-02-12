@@ -1,3 +1,4 @@
+package Clase02;
 import javax.rmi.ssl.SslRMIClientSocketFactory;
 
 public class OperacionesConArreglos {
@@ -44,16 +45,16 @@ public double[] calcularnetoPagar(double[] sueldos, double[] asignaciones, doubl
     return netoPagar;  
 }
 public int hallarMayorEdad(int[] edades1, int[] edades2) {
-    int mayor = edades1[0];  // Suponemos que la primera edad es la mayor inicialmente
+    int mayor = edades1[0]; 
     
-    // Comprobamos el mayor valor en el primer arreglo
+    
     for (int i = 1; i < edades1.length; i++) {
         if (edades1[i] > mayor) {
             mayor = edades1[i];
         }
     }
     
-    // Comprobamos el mayor valor en el segundo arreglo
+  
     for (int i = 0; i < edades2.length; i++) {
         if (edades2[i] > mayor) {
             mayor = edades2[i];
