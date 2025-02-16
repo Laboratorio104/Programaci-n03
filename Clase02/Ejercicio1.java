@@ -167,11 +167,38 @@ public class Ejercicio1 {
     System.out.println();
 
     scanner.close();
-    }
-    }
-        
-        
     
+    System.out.print("Ingrese la cantidad de elementos del arreglo A: ");
+    int x = scanner.nextInt();
+
+    int[] S = new int[x];
+
+    System.out.println("Ingrese los " + x + " números del arreglo A:");
+    for (int i = 0; i < x; i++) {
+        S[i] = scanner.nextInt();
+    }
+
+    System.out.print("Ingrese el número que desea buscar en el arreglo: ");
+    int z = scanner.nextInt();
+
+    int[] posiciones = op.encontrarPosiciones(S, z);
+
+    if (posiciones.length > 0) {
+        System.out.print("Posiciones donde aparece " + z + ": ");
+        for (int pos : posiciones) {
+            System.out.print(pos + " ");
+        }
+        System.out.println();
+    } else {
+        System.out.println("El número " + z + " no se encuentra en el arreglo.");
+    }
+
+    scanner.close();
+    }
+        }
+            
+            
+        
     
 
 

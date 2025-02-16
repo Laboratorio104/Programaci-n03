@@ -252,6 +252,7 @@ public int[] encontrarPosiciones(int[] A, int x) {
     }
 
     return posiciones;
+
 }
 }
 
