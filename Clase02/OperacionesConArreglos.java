@@ -149,5 +149,40 @@ public int[] obtenerImpares(int[] arreglo) {
 
     return impares;
 }
+public int encontrarMayor(int[] numeros) {
+    int mayor = numeros[0];
+
+    for (int num : numeros) {
+        if (num > mayor) {
+            mayor = num;
+        }
+    }
+
+    return mayor;
+}
+
+public int encontrarMenor(int[] numeros) {
+    int menor = numeros[0];
+
+    for (int num : numeros) {
+        if (num < menor) {
+            menor = num;
+        }
+    }
+
+    return menor;
+}
+
+public int contarRepeticiones(int[] numeros, int valor) {
+    int contador = 0;
+
+    for (int num : numeros) {
+        if (num == valor) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
 }
 
