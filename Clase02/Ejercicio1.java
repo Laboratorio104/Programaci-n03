@@ -238,7 +238,43 @@ public class Ejercicio1 {
     System.out.println();
 
     scanner.close();
-}
+
+System.out.print("Ingrese la cantidad de trabajadores: ");
+        int l = scanner.nextInt();
+        scanner.nextLine(); 
+
+        String[] nombres = new String[l];
+        double[] sueld = new double[l];
+        
+        for (int i = 0; i < l; i++) {
+            System.out.print("Ingrese el nombre del trabajador " + (i + 1) + ": ");
+            nombres[i] = scanner.nextLine();
+            System.out.print("Ingrese el sueldo de " + nombres[i] + ": ");
+            sueld[i] = scanner.nextDouble();
+            scanner.nextLine(); 
+        }
+
+        String[] empleadosPromedio = op.empleadosConSueldoPromedio(nombres, sueld);
+
+        double suma = 0;
+        for (double sueldo : sueld) {
+            suma += sueldo;
+        }
+        double promedio = suma / sueld.length;
+
+        System.out.println("\nEl sueldo promedio es: " + promedio);
+
+        if (empleadosPromedio.length > 0) {
+            System.out.println("Los empleados con sueldo promedio son:");
+            for (String nombre : empleadosPromedio) {
+                System.out.println("- " + nombre);
+            }
+        } else {
+            System.out.println("Ningún trabajador tiene el sueldo promedio.");
+        }
+
+        scanner.close();
+    }
 }
         
             
