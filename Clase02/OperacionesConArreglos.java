@@ -195,5 +195,20 @@ public int contarNumeroEnArreglo(int[] arreglo, int numero) {
 
     return contador;
 }
+public int[] sumarOpuestos(int[] A) {
+    int n = A.length;
+    int m = (n + 1) / 2; 
+    int[] B = new int[m];
+
+    for (int i = 0; i < m; i++) {
+        if (i == n - i - 1) {
+            B[i] = A[i]; 
+        } else {
+            B[i] = A[i] + A[n - i - 1]; 
+        }
+    }
+    
+    return B;
+}
 }
 
