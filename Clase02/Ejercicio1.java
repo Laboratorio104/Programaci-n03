@@ -47,20 +47,31 @@ public class Ejercicio1 {
     double[] precios = {1200.50, 500.75, 300.40, 200.00, 50.99};
     int[] cantidades = {2, 4, 3, 5, 10};
 
-    // a. Calcular total gastado por producto
+    
     double[] totalGastado = op.calcularTotalGastado( precios, cantidades);
 
-    // b. Calcular total general de todas las compras
+    
     double totalGeneral = op.calcularTotalGeneral(totalGastado);
     System.out.println("Total general de todas las compras: " + totalGeneral);
 
-    // c. Encontrar el producto con mayor gasto
+    
     String productoMayor = op.productoMayorGasto(descripciones, totalGastado);
     System.out.println(productoMayor);
-}
-}
     }
-}
+    double[] alquileres = {1000, 1500, 2000, 1800, 2200};
+    double[] porcentajes = {10, 12, 8, 15, 10}; 
+
+
+    double[] ganancias = op.calcularGanancias(alquileres, porcentajes);
+
+
+    System.out.println("Ganancias por vivienda:");
+    for (int i = 0; i < ganancias.length; i++) {
+        System.out.println("Vivienda " + (i + 1) + ": $" + ganancias[i]);
+    }
+    }
+        }
+    }
     
 
 
