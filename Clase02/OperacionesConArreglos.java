@@ -97,5 +97,14 @@ public String productoMayorGasto(String[] descripciones, double[] totalGastado) 
 
     return "Producto con mayor gasto: " + descripciones[indiceMayor] + " - Total gastado: " + mayorGasto;
 }
+public double[] calcularGanancias(double[] alquileres, double[] porcentajes) {
+    int n = alquileres.length;
+    double[] ganancias = new double[n];
+
+    for (int i = 0; i < n; i++) {
+        ganancias[i] = alquileres[i] * (porcentajes[i] / 100);
+    }
+    return ganancias;
+}
 }
 
