@@ -184,5 +184,16 @@ public int contarRepeticiones(int[] numeros, int valor) {
 
     return contador;
 }
+public int contarNumeroEnArreglo(int[] arreglo, int numero) {
+    int contador = 0;
+
+    for (int i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] == numero) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
 }
 
