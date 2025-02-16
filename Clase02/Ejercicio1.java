@@ -69,6 +69,22 @@ public class Ejercicio1 {
     for (int i = 0; i < ganancias.length; i++) {
         System.out.println("Vivienda " + (i + 1) + ": $" + ganancias[i]);
     }
+    int[] A = {3, 8, 12, 7, 5, 10, 15, 20, 6, 1}; 
+
+
+    int[] pares = op.obtenerPares(A);
+    int[] impares = op.obtenerImpares(A);
+
+
+    System.out.println("Números pares:");
+    for (int num : pares) {
+        System.out.print(num + " ");
+    }
+
+    System.out.println("\nNúmeros impares:");
+    for (int num : impares) {
+        System.out.print(num + " ");
+    }
     }
         }
     }
