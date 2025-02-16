@@ -280,5 +280,18 @@ public int[][] separarPorMedia(int[] A) {
 
     return new int[][]{arrMayores, arrMenores};
 }
+public int[] calcularDiferencias(int[] A) {
+    if (A.length < 2) {
+        return new int[0];
+    }
+
+    int[] diferencias = new int[A.length - 1];
+
+    for (int i = 0; i < A.length - 1; i++) {
+        diferencias[i] = A[i] - A[i + 1];
+    }
+
+    return diferencias;
+}
 }
 
