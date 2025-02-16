@@ -254,5 +254,31 @@ public int[] encontrarPosiciones(int[] A, int x) {
     return posiciones;
 
 }
+public int[][] separarPorMedia(int[] A) {
+    double suma = 0;
+
+    for (int num : A) {
+        suma += num;
+    }
+
+    double media = suma / A.length;
+
+    int mayores = 0, menores = 0;
+    for (int num : A) {
+        if (num > media) mayores++;
+        else if (num < media) menores++;
+    }
+
+    int[] arrMayores = new int[mayores];
+    int[] arrMenores = new int[menores];
+
+    int iMay = 0, iMen = 0;
+    for (int num : A) {
+        if (num > media) arrMayores[iMay++] = num;
+        else if (num < media) arrMenores[iMen++] = num;
+    }
+
+    return new int[][]{arrMayores, arrMenores};
+}
 }
 
