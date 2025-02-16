@@ -293,5 +293,35 @@ public int[] calcularDiferencias(int[] A) {
 
     return diferencias;
 }
+public String[] empleadosConSueldoPromedio(String[] nombres, double[] sueldos) {
+    if (nombres.length == 0 || sueldos.length == 0 || nombres.length != sueldos.length) {
+        return new String[0]; 
+    }
+
+    double suma = 0;
+    for (double sueldo : sueldos) {
+        suma += sueldo;
+    }
+
+    double promedio = suma / sueldos.length;
+
+    int count = 0;
+    for (double sueldo : sueldos) {
+        if (sueldo == promedio) {
+            count++;
+        }
+    }
+
+    String[] empleadosPromedio = new String[count];
+    int index = 0;
+
+    for (int i = 0; i < sueldos.length; i++) {
+        if (sueldos[i] == promedio) {
+            empleadosPromedio[index++] = nombres[i];
+        }
+    }
+
+    return empleadosPromedio;
+}
 }
 
