@@ -138,9 +138,38 @@ public class Ejercicio1 {
 
         scanner.close();
     
-} 
-}
-    
+
+    System.out.print("Ingrese la cantidad de elementos del arreglo A: ");
+    int d = scanner.nextInt();
+
+    int[] C = new int[d];
+
+    System.out.println("Ingrese los " + d + " números del arreglo A:");
+    for (int i = 0; i < n; i++) {
+        C[i] = scanner.nextInt();
+    }
+
+    int[][] resultado = op.separarNumeros(C);
+    int[] negativos = resultado[0];
+    int[] ceros = resultado[1];
+    int[] positivos = resultado[2];
+
+    System.out.print("Negativos: ");
+    for (int num : negativos) System.out.print(num + " ");
+    System.out.println();
+
+    System.out.print("Ceros: ");
+    for (int num : ceros) System.out.print(num + " ");
+    System.out.println();
+
+    System.out.print("Positivos: ");
+    for (int num : positivos) System.out.print(num + " ");
+    System.out.println();
+
+    scanner.close();
+    }
+    }
+        
         
     
     
