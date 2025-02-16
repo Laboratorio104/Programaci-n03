@@ -218,8 +218,29 @@ public class Ejercicio1 {
         System.out.println();
 
         scanner.close();
+    
+    System.out.print("Ingrese la cantidad de elementos del arreglo A: ");
+    int f = scanner.nextInt();
+
+    int[] F = new int[f];
+
+    System.out.println("Ingrese los " + f + " números del arreglo A:");
+    for (int i = 0; i < f; i++) {
+        F[i] = scanner.nextInt();
     }
-        }
+
+    int[] diferencias = op.calcularDiferencias(A);
+
+    System.out.print("Arreglo de diferencias sucesivas: ");
+    for (int num : diferencias) {
+        System.out.print(num + " ");
+    }
+    System.out.println();
+
+    scanner.close();
+}
+}
+        
             
             
         
