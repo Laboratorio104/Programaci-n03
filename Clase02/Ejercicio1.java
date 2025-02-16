@@ -1,5 +1,5 @@
 package Clase02;
-
+import java.util.Scanner;
 public class Ejercicio1 {
     public static void main(String[] args){
 
@@ -61,16 +61,14 @@ public class Ejercicio1 {
     double[] alquileres = {1000, 1500, 2000, 1800, 2200};
     double[] porcentajes = {10, 12, 8, 15, 10}; 
 
-
     double[] ganancias = op.calcularGanancias(alquileres, porcentajes);
-
 
     System.out.println("Ganancias por vivienda:");
     for (int i = 0; i < ganancias.length; i++) {
         System.out.println("Vivienda " + (i + 1) + ": $" + ganancias[i]);
     }
+    Scanner scanner = new Scanner(System.in);
     int[] A = {3, 8, 12, 7, 5, 10, 15, 20, 6, 1}; 
-
 
     int[] pares = op.obtenerPares(A);
     int[] impares = op.obtenerImpares(A);
@@ -85,9 +83,27 @@ public class Ejercicio1 {
     for (int num : impares) {
         System.out.print(num + " ");
     }
+    int[] numeros = new int[30];
+
+    System.out.println("Ingrese 30 números:");
+    for (int i = 0; i < 30; i++) {
+        numeros[i] = scanner.nextInt();
+    }
+
+    int mayor = op.encontrarMayor(numeros);
+    int menor = op.encontrarMenor(numeros);
+
+    int repeticionesMayor = op.contarRepeticiones(numeros, mayor);
+    int repeticionesMenor = op.contarRepeticiones(numeros, menor);
+
+    System.out.println("Número mayor: " + mayor + " (Repetido " + repeticionesMayor + " veces)");
+    System.out.println("Número menor: " + menor + " (Repetido " + repeticionesMenor + " veces)");
+
+    scanner.close();
+}
     }
         }
-    }
+    
     
 
 
