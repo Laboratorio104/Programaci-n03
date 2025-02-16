@@ -210,5 +210,27 @@ public int[] sumarOpuestos(int[] A) {
     
     return B;
 }
+public int[][] separarNumeros(int[] A) {
+    int negativos = 0, ceros = 0, positivos = 0;
+
+    for (int num : A) {
+        if (num < 0) negativos++;
+        else if (num == 0) ceros++;
+        else positivos++;
+    }
+
+    int[] arrNegativos = new int[negativos];
+    int[] arrCeros = new int[ceros];
+    int[] arrPositivos = new int[positivos];
+
+    int iNeg = 0, iCero = 0, iPos = 0;
+    for (int num : A) {
+        if (num < 0) arrNegativos[iNeg++] = num;
+        else if (num == 0) arrCeros[iCero++] = num;
+        else arrPositivos[iPos++] = num;
+    }
+
+    return new int[][]{arrNegativos, arrCeros, arrPositivos};
+}
 }
 
