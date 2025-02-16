@@ -23,7 +23,7 @@ public class Ejercicio1 {
     int random = min + (int)(Math.random() * (max-min)+ 1);
     System.out.println("Numero generado entre " + min + " y " + max + ": " + random);
 
-    
+
     double[] sueldos = {3000, 2500, 4000, 3500, 2800};
     double[] asignaciones = {500, 400, 600, 450, 550};
     double[] deducciones = {200, 150, 300, 250, 180}; 
@@ -117,8 +117,30 @@ public class Ejercicio1 {
     System.out.println("El número " + numeroBuscado + " aparece " + cantidad + " veces en el arreglo.");
 
     scanner.close();
-    }
-    }
+    
+    System.out.print("Ingrese la cantidad de elementos del arreglo A: ");
+        int e = scanner.nextInt();
+
+        int[] A = new int[e];
+
+        System.out.println("Ingrese los " + e + " números del arreglo A:");
+        for (int i = 0; i < e; i++) {
+            A[i] = scanner.nextInt();
+        }
+
+        int[] B = op.sumarOpuestos(A);
+
+        System.out.print("Arreglo resultante B: ");
+        for (int num : B) {
+            System.out.print(num + " ");
+        }
+        System.out.println(); 
+
+        scanner.close();
+    
+} 
+}
+    
         
     
     
