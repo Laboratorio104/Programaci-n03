@@ -106,5 +106,48 @@ public double[] calcularGanancias(double[] alquileres, double[] porcentajes) {
     }
     return ganancias;
 }
+public int[] obtenerPares(int[] arreglo) {
+    int countPares = 0;
+
+    
+    for (int num : arreglo) {
+        if (num % 2 == 0) {
+            countPares++;
+        }
+    }
+
+    int[] pares = new int[countPares];
+    int index = 0;
+    
+    for (int num : arreglo) {
+        if (num % 2 == 0) {
+            pares[index++] = num;
+        }
+    }
+
+    return pares;
+}
+
+public int[] obtenerImpares(int[] arreglo) {
+    int countImpares = 0;
+
+    
+    for (int num : arreglo) {
+        if (num % 2 != 0) {
+            countImpares++;
+        }
+    }
+
+    int[] impares = new int[countImpares];
+    int index = 0;
+
+    for (int num : arreglo) {
+        if (num % 2 != 0) {
+            impares[index++] = num;
+        }
+    }
+
+    return impares;
+}
 }
 
