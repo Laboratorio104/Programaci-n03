@@ -1,7 +1,7 @@
 package Clase02;
 
 public class Ejercicio1 {
-    public static void main(String args){
+    public static void main(String[] args){
 
     OperacionesConArreglos op = new OperacionesConArreglos();
     
@@ -15,8 +15,8 @@ public class Ejercicio1 {
         }
 
     int n = 5;
-    int[] a = op.llenarArreglo(n);
-    System.out.println(op.mostrarElementos(a));
+    int[] b = op.llenarArreglo(n);
+    System.out.println(op.mostrarElementos(b));
 
     int min = -10;
     int max = 20;
@@ -42,6 +42,21 @@ public class Ejercicio1 {
     
     int mayorEdad = op.hallarMayorEdad(edadesGrupo1, edadesGrupo2);
     System.out.println("La mayor edad entre ambos grupos es: " + mayorEdad);
+
+    String[] descripciones = {"Laptop", "Teléfono", "Tablet", "Monitor", "Teclado"};
+    double[] precios = {1200.50, 500.75, 300.40, 200.00, 50.99};
+    int[] cantidades = {2, 4, 3, 5, 10};
+
+    // a. Calcular total gastado por producto
+    double[] totalGastado = op.calcularTotalGastado( precios, cantidades);
+
+    // b. Calcular total general de todas las compras
+    double totalGeneral = op.calcularTotalGeneral(totalGastado);
+    System.out.println("Total general de todas las compras: " + totalGeneral);
+
+    // c. Encontrar el producto con mayor gasto
+    String productoMayor = op.productoMayorGasto(descripciones, totalGastado);
+    System.out.println(productoMayor);
 }
 }
     }

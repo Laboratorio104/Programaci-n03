@@ -11,7 +11,7 @@ public class OperacionesConArreglos {
     }
 public int sumarElementos(int[] a){
     int suma= 0;
-    for (int i = 1; i< a.length; i++) {
+    for (int i = 0; i< a.length; i++) {
         suma += a[i];
     }
     return suma;
@@ -20,7 +20,7 @@ public int sumarElementos(int[] a){
 public double promedioElementos (int[] a) {
 
     double suma = 0.0, promedio = 0.0;
-    for (int i=0; 1 < a.length; i++) {
+    for (int i=0; i < a.length; i++) {
         suma += a[i];
     }
     promedio = suma / a.length;
@@ -63,4 +63,39 @@ public int hallarMayorEdad(int[] edades1, int[] edades2) {
     
     return mayor;
 }
+public double[] calcularTotalGastado(double[] precios, int[] cantidades) {
+    int n = precios.length;
+    double[] totalGastado = new double[n];
+
+    for (int i = 0; i < n; i++) {
+        totalGastado[i] = precios[i] * cantidades[i];
+    }
+    return totalGastado;
 }
+
+public double calcularTotalGeneral(double[] totalGastado) {
+    double totalGeneral = 0;
+    for (double gasto : totalGastado) {
+        totalGeneral += gasto;
+    }
+    return totalGeneral;
+}
+public String productoMayorGasto(String[] descripciones, double[] totalGastado) {
+    if (descripciones.length == 0 || totalGastado.length == 0) {
+        return "No hay productos registrados.";
+    }
+
+    int indiceMayor = 0;
+    double mayorGasto = totalGastado[0];
+
+    for (int i = 1; i < totalGastado.length; i++) {
+        if (totalGastado[i] > mayorGasto) {
+            mayorGasto = totalGastado[i];
+            indiceMayor = i;
+        }
+    }
+
+    return "Producto con mayor gasto: " + descripciones[indiceMayor] + " - Total gastado: " + mayorGasto;
+}
+}
+
