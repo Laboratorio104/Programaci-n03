@@ -323,5 +323,53 @@ public String[] empleadosConSueldoPromedio(String[] nombres, double[] sueldos) {
 
     return empleadosPromedio;
 }
+
+public void analizarProfesores(String[] nombres, int[] edades, char[] sexos) {
+    if (nombres.length == 0 || edades.length == 0 || sexos.length == 0 || nombres.length != edades.length || nombres.length != sexos.length) {
+        System.out.println("Error: Los datos de los profesores están incompletos o no coinciden.");
+        return;
+    }
+
+    int sumaEdades = 0;
+    for (int edad : edades) {
+        sumaEdades += edad;
+    }
+    double edadPromedio = (double) sumaEdades / edades.length;
+
+    int indiceJoven = 0;
+    for (int i = 1; i < edades.length; i++) {
+        if (edades[i] < edades[indiceJoven]) {
+            indiceJoven = i;
+        }
+    }
+    String profesorJoven = nombres[indiceJoven];
+
+    int indiceMayor = 0;
+    for (int i = 1; i < edades.length; i++) {
+        if (edades[i] > edades[indiceMayor]) {
+            indiceMayor = i;
+        }
+    }
+    String profesorMayor = nombres[indiceMayor];
+
+    int profesorasMayorPromedio = 0;
+    int profesoresMenorPromedio = 0;
+
+    for (int i = 0; i < edades.length; i++) {
+        if (sexos[i] == 'F' && edades[i] > edadPromedio) {
+            profesorasMayorPromedio++;
+        }
+        if (sexos[i] == 'M' && edades[i] < edadPromedio) {
+            profesoresMenorPromedio++;
+        }
+    }
+
+    System.out.println("\nResultados:");
+    System.out.println("Edad promedio del grupo: " + edadPromedio);
+    System.out.println("Profesor más joven: " + profesorJoven);
+    System.out.println("Profesor con mayor edad: " + profesorMayor);
+    System.out.println("Número de profesoras con edad mayor al promedio: " + profesorasMayorPromedio);
+    System.out.println("Número de profesores con edad menor al promedio: " + profesoresMenorPromedio);
+}
 }
 

@@ -44,14 +44,11 @@ public class Ejercicio1 {
     double[] precios = {1200.50, 500.75, 300.40, 200.00, 50.99};
     int[] cantidades = {2, 4, 3, 5, 10};
 
-    
     double[] totalGastado = op.calcularTotalGastado( precios, cantidades);
 
-    
     double totalGeneral = op.calcularTotalGeneral(totalGastado);
     System.out.println("Total general de todas las compras: " + totalGeneral);
 
-    
     String productoMayor = op.productoMayorGasto(descripciones, totalGastado);
     System.out.println(productoMayor);
     }
