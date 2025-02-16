@@ -232,5 +232,26 @@ public int[][] separarNumeros(int[] A) {
 
     return new int[][]{arrNegativos, arrCeros, arrPositivos};
 }
+
+public int[] encontrarPosiciones(int[] A, int x) {
+    int contador = 0;
+
+    for (int i = 0; i < A.length; i++) {
+        if (A[i] == x) {
+            contador++;
+        }
+    }
+
+    int[] posiciones = new int[contador];
+    int index = 0;
+
+    for (int i = 0; i < A.length; i++) {
+        if (A[i] == x) {
+            posiciones[index++] = i + 1; 
+        }
+    }
+
+    return posiciones;
+}
 }
 
