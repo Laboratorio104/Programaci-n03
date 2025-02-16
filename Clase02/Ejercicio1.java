@@ -194,6 +194,30 @@ public class Ejercicio1 {
     }
 
     scanner.close();
+    
+    System.out.print("Ingrese la cantidad de elementos del arreglo A: ");
+        int p = scanner.nextInt();
+
+        int[] R = new int[p];
+
+        System.out.println("Ingrese los " + p + " números del arreglo A:");
+        for (int i = 0; i < p; i++) {
+            R[i] = scanner.nextInt();
+        }
+
+        int[][] result = op.separarPorMedia(A);
+        int[] mayores = result[0];
+        int[] menores = result[1];
+
+        System.out.print("Elementos mayores que la media: ");
+        for (int num : mayores) System.out.print(num + " ");
+        System.out.println();
+
+        System.out.print("Elementos menores que la media: ");
+        for (int num : menores) System.out.print(num + " ");
+        System.out.println();
+
+        scanner.close();
     }
         }
             
