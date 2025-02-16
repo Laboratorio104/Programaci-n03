@@ -4,7 +4,7 @@ public class Ejercicio1 {
     public static void main(String[] args){
 
     OperacionesConArreglos op = new OperacionesConArreglos();
-    
+    Scanner scanner = new Scanner(System.in);
         int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         for (int i = 0; i < a.length; i++) {
@@ -23,18 +23,15 @@ public class Ejercicio1 {
     int random = min + (int)(Math.random() * (max-min)+ 1);
     System.out.println("Numero generado entre " + min + " y " + max + ": " + random);
 
-
-
+    
     double[] sueldos = {3000, 2500, 4000, 3500, 2800};
     double[] asignaciones = {500, 400, 600, 450, 550};
     double[] deducciones = {200, 150, 300, 250, 180}; 
 
-   
     double[] netoPagar = op.calcularnetoPagar(sueldos, asignaciones, deducciones);{
 
     for (int i = 0; i < netoPagar.length; i++) {
         System.out.println("Neto a pagar de cada empleado" + "Empleado " + (i + 1) + ": " + netoPagar[i]);
-     
     
     int[] edadesGrupo1 = {25, 30, 22, 28, 35};
     int[] edadesGrupo2 = {40, 45, 29, 50, 38};
@@ -67,7 +64,7 @@ public class Ejercicio1 {
     for (int i = 0; i < ganancias.length; i++) {
         System.out.println("Vivienda " + (i + 1) + ": $" + ganancias[i]);
     }
-    Scanner scanner = new Scanner(System.in);
+    
     int[] A = {3, 8, 12, 7, 5, 10, 15, 20, 6, 1}; 
 
     int[] pares = op.obtenerPares(A);
@@ -100,9 +97,29 @@ public class Ejercicio1 {
     System.out.println("Número menor: " + menor + " (Repetido " + repeticionesMenor + " veces)");
 
     scanner.close();
-}
     }
-        }
+
+    System.out.print("Ingrese la cantidad de elementos del arreglo: ");
+    int c = scanner.nextInt();
+
+    int[] numeros = new int[c];
+
+    System.out.println("Ingrese los " + c + " números:");
+    for (int i = 0; i < c; i++) {
+        numeros[i] = scanner.nextInt();
+    }
+
+    System.out.print("Ingrese el número que desea buscar: ");
+    int numeroBuscado = scanner.nextInt();
+
+    int cantidad = op.contarNumeroEnArreglo(numeros, numeroBuscado);
+
+    System.out.println("El número " + numeroBuscado + " aparece " + cantidad + " veces en el arreglo.");
+
+    scanner.close();
+    }
+    }
+        
     
     
 
