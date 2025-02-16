@@ -36,7 +36,6 @@ public class Ejercicio1 {
     int[] edadesGrupo1 = {25, 30, 22, 28, 35};
     int[] edadesGrupo2 = {40, 45, 29, 50, 38};
 
-    
     int mayorEdad = op.hallarMayorEdad(edadesGrupo1, edadesGrupo2);
     System.out.println("La mayor edad entre ambos grupos es: " + mayorEdad);
 
@@ -66,7 +65,6 @@ public class Ejercicio1 {
 
     int[] pares = op.obtenerPares(A);
     int[] impares = op.obtenerImpares(A);
-
 
     System.out.println("Números pares:");
     for (int num : pares) {
@@ -135,7 +133,6 @@ public class Ejercicio1 {
 
         scanner.close();
     
-
     System.out.print("Ingrese la cantidad de elementos del arreglo A: ");
     int d = scanner.nextInt();
 
@@ -269,6 +266,28 @@ System.out.print("Ingrese la cantidad de trabajadores: ");
         } else {
             System.out.println("Ningún trabajador tiene el sueldo promedio.");
         }
+
+        scanner.close();
+    
+    System.out.print("Ingrese la cantidad de profesores: ");
+        int m = scanner.nextInt();
+        scanner.nextLine();
+
+        String[] nombr = new String[m];
+        int[] edades = new int[m];
+        char[] sexos = new char[m];
+
+        for (int i = 0; i < m; i++) {
+            System.out.print("Ingrese el nombre del profesor " + (i + 1) + ": ");
+            nombr[i] = scanner.nextLine();
+            System.out.print("Ingrese la edad de " + nombr[i] + ": ");
+            edades[i] = scanner.nextInt();
+            System.out.print("Ingrese el sexo de " + nombr[i] + " (M/F): ");
+            sexos[i] = scanner.next().charAt(0);
+            scanner.nextLine(); 
+        }
+
+        op.analizarProfesores(nombr, edades, sexos);
 
         scanner.close();
     }
