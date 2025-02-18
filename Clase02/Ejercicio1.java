@@ -5,15 +5,17 @@ public class Ejercicio1 {
 
     OperacionesConArreglos op = new OperacionesConArreglos();
     Scanner scanner = new Scanner(System.in);
+    
         int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         for (int i = 0; i < a.length; i++) {
+
             System.out.println(op.mostrarElementos(a));
             System.out.println("La suma del arreglo es: " + op.sumarElementos(a));
             System.out.println("Ele promedio del arreglo es: " + op.promedioElementos(a));
 
         }
-
+    
     int n = 5;
     int[] b = op.llenarArreglo(n);
     System.out.println(op.mostrarElementos(b));
@@ -32,7 +34,7 @@ public class Ejercicio1 {
 
     for (int i = 0; i < netoPagar.length; i++) {
         System.out.println("Neto a pagar de cada empleado" + "Empleado " + (i + 1) + ": " + netoPagar[i]);
-    
+
     int[] edadesGrupo1 = {25, 30, 22, 28, 35};
     int[] edadesGrupo2 = {40, 45, 29, 50, 38};
 
@@ -51,6 +53,7 @@ public class Ejercicio1 {
     String productoMayor = op.productoMayorGasto(descripciones, totalGastado);
     System.out.println(productoMayor);
     }
+    
     double[] alquileres = {1000, 1500, 2000, 1800, 2200};
     double[] porcentajes = {10, 12, 8, 15, 10}; 
 
@@ -60,7 +63,7 @@ public class Ejercicio1 {
     for (int i = 0; i < ganancias.length; i++) {
         System.out.println("Vivienda " + (i + 1) + ": $" + ganancias[i]);
     }
-    
+     
     int[] A = {3, 8, 12, 7, 5, 10, 15, 20, 6, 1}; 
 
     int[] pares = op.obtenerPares(A);
@@ -81,7 +84,7 @@ public class Ejercicio1 {
     for (int i = 0; i < 30; i++) {
         numeros[i] = scanner.nextInt();
     }
-
+ 
     int mayor = op.encontrarMayor(numeros);
     int menor = op.encontrarMenor(numeros);
 

@@ -1,0 +1,11 @@
+public class Ejecutar{
+    public static void main(String[] args){
+        MetodosAreglos obj = new MetodosAreglos();
+
+        String[] nombres= {"Luis ", "Maria ", "Angela ", "Sandra ", "Fernando"}
+        int[] sueldos = { 100, 200, 150, 300, 100 };
+
+        System.out.println(obj.nombresSueldos(nombres, sueldos));
+
+    }
+}

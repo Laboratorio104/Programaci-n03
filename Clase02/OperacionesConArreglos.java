@@ -2,6 +2,7 @@ package Clase02;
 import javax.rmi.ssl.SslRMIClientSocketFactory;
 
 public class OperacionesConArreglos {
+     
     public String mostrarElementos(int[] a){
         String cad = "";
         for (int i = 0; i < a.length; i++) {
@@ -9,6 +10,7 @@ public class OperacionesConArreglos {
         }
         return cad;
     }
+    
 public int sumarElementos(int[] a){
     int suma= 0;
     for (int i = 0; i< a.length; i++) {
@@ -26,6 +28,7 @@ public double promedioElementos (int[] a) {
     promedio = suma / a.length;
     return promedio;
 }
+
 public int[] llenarArreglo(int tam) {
     int[] nuevoArreglo = new int [tam];
     for( int i = 0; i < nuevoArreglo.length; i ++) {
@@ -35,6 +38,7 @@ public int[] llenarArreglo(int tam) {
     return nuevoArreglo;
 
 }
+
 public double[] calcularnetoPagar(double[] sueldos, double[] asignaciones, double[] deducciones) {
     int n = sueldos.length; 
     double[] netoPagar = new double[n];
@@ -44,6 +48,7 @@ public double[] calcularnetoPagar(double[] sueldos, double[] asignaciones, doubl
     }
     return netoPagar;  
 }
+ 
 public int hallarMayorEdad(int[] edades1, int[] edades2) {
     int mayor = edades1[0]; 
     
@@ -53,7 +58,6 @@ public int hallarMayorEdad(int[] edades1, int[] edades2) {
             mayor = edades1[i];
         }
     }
-    
   
     for (int i = 0; i < edades2.length; i++) {
         if (edades2[i] > mayor) {
@@ -84,7 +88,7 @@ public String productoMayorGasto(String[] descripciones, double[] totalGastado) 
     if (descripciones.length == 0 || totalGastado.length == 0) {
         return "No hay productos registrados.";
     }
-
+   
     int indiceMayor = 0;
     double mayorGasto = totalGastado[0];
 
@@ -106,6 +110,7 @@ public double[] calcularGanancias(double[] alquileres, double[] porcentajes) {
     }
     return ganancias;
 }
+
 public int[] obtenerPares(int[] arreglo) {
     int countPares = 0;
 
@@ -210,6 +215,7 @@ public int[] sumarOpuestos(int[] A) {
     
     return B;
 }
+
 public int[][] separarNumeros(int[] A) {
     int negativos = 0, ceros = 0, positivos = 0;
 

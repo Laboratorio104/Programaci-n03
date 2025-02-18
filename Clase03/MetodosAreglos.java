@@ -1,0 +1,23 @@
+package Clase03;
+
+public class MetodosAreglos {
+    public String nombresSueldos (String[] n, int[] s){
+        int suma =0;
+
+        for (int i = 0; i<s.length; i++){
+            double promedio = suma/s.length; 
+            String cad ="";
+            int contador = 0;
+            for(int i = 0; i< s.length; i++){
+                if(s[i]>= promedio){
+                    cad += n[i] + "\n";
+                    contador ++;
+
+                }
+            }
+            cad+= "Fueron " + contador + "los empleados que tiene por encima del promedio: " + promedio;
+            return cad;
+        }
+
+    }
+}
