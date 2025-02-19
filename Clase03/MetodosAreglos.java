@@ -3,6 +3,7 @@ package Clase03;
 public class MetodosAreglos {
     public String nombresSueldos(String[] n, int[] s){
     int suma = 0;
+    
         for (int i = 0; i < s.length; i++) {
             suma += s[i];
         }
@@ -15,7 +16,8 @@ public class MetodosAreglos {
                 cad += n[i] + "\n";
                 contador++;
             }
-        }
+            
+           }
         cad += "Fueron " + contador + " los empleados que tienen sueldo por encima del promedio: " + promedio;
         return cad;
         }
