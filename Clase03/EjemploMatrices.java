@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class EjemploMatrices {
     public static void main (String[] args){
+      
         int[][] m = {{9, 3, 5}, 
                      {1, 4, 2},
                     {8, 7, 6}};
@@ -30,7 +31,7 @@ public class EjemploMatrices {
                         }
                         System.out.println("Columna " + j + ": " + sumaColumnas);
                     }
-
+/* 
 
                     int[][] tabla = new int[10][10];
 
@@ -48,39 +49,36 @@ public class EjemploMatrices {
                     
                         System.out.println();
                     }
-                }
-                    {
+                    */
                 
-                     Scanner scanner = new Scanner(System.in);
-                System.out.print("Ingrese el número de filas (n): ");
-                int n = scanner.nextInt();
-                System.out.print("Ingrese el número de columnas (m): ");
-                int m = scanner.nextInt();
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.print("Ingrese el número de filas (n): ");
+                        int n = scanner.nextInt();
+                        System.out.print("Ingrese el número de columnas (m): ");
+                        int m1 = scanner.nextInt();
+                        
+                        int[][] matriz = new int[n][m1];
                 
-                int[][] matriz = new int[n][m];
-
-                for (int i = 0; i < n; i++) {
-                    for (int j = 0; j < m; j++) {
-                        if (i == j) { 
-                            matriz[i][j] = 1;
-                        } else {
-                            matriz[i][j] = 0;
+                        int min = Math.min(n, m1);
+                        for (int i = 0; i < min; i++) {
+                            matriz[i][i] = 1;
                         }
-                    }
-                }
-
-                System.out.println("Matriz generada:");
-                for (int i = 0; i < n; i++) {
-                    for (int j = 0; j < m; j++) {
-                        System.out.print(matriz[i][j] + " ");
-                    }
-                    System.out.println();
-                }
                 
-                scanner.close();
-    }
+                        System.out.println("Matriz generada:");
+                        for (int i = 0; i < n; i++) {
+                            for (int j = 0; j < m1; j++) {
+                                System.out.print(matriz[i][j] + " ");
+                            }
+                            System.out.println();
+                        }
+                        
+                        scanner.close();
+                    }
+                }
+            
         
-                 }
+                 
+                
                 
 
 
