@@ -19,6 +19,13 @@ public class EjecutarPilaTrabajador{
         for( int i = 0; i < Trabajadores.size(); i++);{
         System.out.println(Trabajadores.elementAt(i).getNombre());
 
+        double inc = 0.20;
+
+        for(int i =0; i < Trabajadores.size(); i++){
+            System.out.println(Trabajadores.elementAt(i).getNombre() + "Salario inicial: " + Trabajadores.elementAt(i).getSalario() + "Salario final: " + 
+            Trabajadores.elementAt(i).pagar(inc) + "\n");
+        }
+
         }
 
 
