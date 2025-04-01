@@ -16,6 +16,12 @@ public class EjecutarPilaTrabajador{
 
         System.out.println("Trabajadores");
 
+        for( int i = 0; i < Trabajadores.size(); );{
+        System.out.println(Trabajadores.peek().getNombre());
+
+        }
+
+
 
     }
 }
