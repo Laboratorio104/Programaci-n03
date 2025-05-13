@@ -13,5 +13,9 @@ public class RutaUniversidad{
         dijkstra("Sede Sur", "Sede Norte");
 
     }
+    
+    private static void agregarConexion(String origen, String destino, int tiempo) {
+        grafo.computeIfAbsent(origen, k -> new HashMap<>()).put(destino, tiempo);
+        grafo.computeIfAbsent(destino, k -> new HashMap<>()).put(origen, tiempo); // Si es bidireccional
 
 }
