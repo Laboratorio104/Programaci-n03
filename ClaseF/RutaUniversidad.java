@@ -19,3 +19,15 @@ public class RutaUniversidad{
         grafo.computeIfAbsent(destino, k -> new HashMap<>()).put(origen, tiempo); // Si es bidireccional
 
 }
+    // Implementación de Dijkstra
+    private static void dijkstra(String inicio, String fin) {
+        Map<String, Integer> distancias = new HashMap<>();
+        Map<String, String> anteriores = new HashMap<>();
+        PriorityQueue<String> cola = new PriorityQueue<>(Comparator.comparingInt(distancias::get));
+
+        // Inicializar distancias a infinito excepto la de inicio
+        for (String nodo : grafo.keySet()) {
+            distancias.put(nodo, Integer.MAX_VALUE);
+}
+    }
+}
