@@ -50,5 +50,11 @@ public class RutaUniversidad{
             ruta.add(0, actual);
             actual = anteriores.get(actual);
         }
+        System.out.println("Ruta más corta de " + inicio + " a " + fin + ":");
+        for (int i = 0; i < ruta.size(); i++) {
+            System.out.print(ruta.get(i));
+            if (i < ruta.size() - 1) System.out.print(" -> ");
         }
+        System.out.println("\nTiempo total estimado: " + distancias.get(fin) + " minutos");
     }
+}
