@@ -29,5 +29,7 @@ public class RutaUniversidad{
         for (String nodo : grafo.keySet()) {
             distancias.put(nodo, Integer.MAX_VALUE);
 }
+       distancias.put(inicio, 0);
+            cola.add(inicio);
     }
 }
