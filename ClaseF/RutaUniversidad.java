@@ -31,5 +31,24 @@ public class RutaUniversidad{
 }
        distancias.put(inicio, 0);
             cola.add(inicio);
-    }
+
+        while (!cola.isEmpty()) {
+        String actual = cola.poll();
+        for (Map.Entry<String, Integer> vecino : grafo.get(actual).entrySet()) {
+            int nuevaDistancia = distancias.get(actual) + vecino.getValue();
+            if (nuevaDistancia < distancias.get(vecino.getKey())) {
+                distancias.put(vecino.getKey(), nuevaDistancia);
+                anteriores.put(vecino.getKey(), actual);
+                cola.add(vecino.getKey());
 }
+
+}
+            }
+        List<String> ruta = new ArrayList<>();
+        String actual = fin;
+        while (actual != null) {
+            ruta.add(0, actual);
+            actual = anteriores.get(actual);
+        }
+        }
+    }
